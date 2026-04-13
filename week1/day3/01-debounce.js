@@ -16,9 +16,9 @@ const input = document.querySelector("#search");
 const result = document.querySelector("#result");
 
 const debouncedLog = debounce((text) => {
-    result.textContent = "Ket qua tim kiem: "+ text;
+    result.textContent = "Kết quả tìm kiếm: "+ text;
 },1000);
 
 input.addEventListener("input", (e) => {
     debouncedLog(e.target.value);
-})
+});
