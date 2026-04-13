@@ -31,19 +31,19 @@ const profiles = [
   { name: "Khang", active: false },
 ];
 
-// const evennumbers = numbers.myFilter( n => n % 2 === 0);
-// console.log(evennumbers);
+const evennumbers = numbers.myFilter( n => n % 2 === 0);
+console.log(evennumbers);
 
-// const doubled = numbers.myMap( n => n*2 );
-// console.log(doubled);
+const doubled = numbers.myMap( n => n*2 );
+console.log(doubled);
 
-// const activeUsers = profiles.myFilter(u => u.active);
-// console.log(activeUsers);
+const activeUsers = profiles.myFilter(u => u.active);
+console.log(activeUsers);
 
-// const names = profiles.myMap(u => u.name);
-// console.log(names);
+const names = profiles.myMap(u => u.name);
+console.log(names);
 
-// xay dung myReduce
+// xay dung myReduce:
 Array.prototype.myReduce = function (callback, initialValue) {
   if (this.length === 0 && initialValue === undefined) {
     throw new TypeError("Reduce of empty array with no initial value");
@@ -64,5 +64,3 @@ Array.prototype.myReduce = function (callback, initialValue) {
   return accumulator;
 };
 
-const test = profiles.myReduce((totalname, name) => totalname + name, 0);
-console.log(totalname);
