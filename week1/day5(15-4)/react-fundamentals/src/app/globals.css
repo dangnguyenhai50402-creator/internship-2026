@@ -1,4 +1,8 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: sans-serif;
@@ -16,7 +20,11 @@ body {
   margin-bottom: 2rem;
 }
 
-.counter h2 { margin-bottom: 0.75rem; font-size: 16px; color: #666; }
+.counter h2 {
+  margin-bottom: 0.75rem;
+  font-size: 16px;
+  color: #666;
+}
 
 .count-display {
   font-size: 48px;
@@ -24,11 +32,31 @@ body {
   text-align: center;
   margin: 0.5rem 0 1rem;
 }
+.content {
+  display: flex;
+  justify-content: center; /* ngang */
+  align-items: center; /* dọc */
+  min-height: 70vh; /* chiếm chiều cao màn hình */
+}
+.btn-group {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
 
-.btn-group { display: flex; gap: 8px; justify-content: center; }
-
+.container {
+  display: flex;
+  flex-direction: column; /* 🔥 quan trọng: xếp dọc */
+  align-items: center; /* căn giữa ngang */
+}
+.content {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 .btn-group button {
-  padding: 6px 20px;
+  padding: 6px 12px;
   border-radius: 8px;
   border: 1px solid #ddd;
   background: white;
@@ -36,9 +64,15 @@ body {
   font-size: 14px;
 }
 
-.btn-group button:hover { background: #f0f0f0; }
+.btn-group button:hover {
+  background: #f0f0f0;
+}
 
-.user-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
 
 .user-card {
   background: white;
@@ -51,16 +85,36 @@ body {
 }
 
 .avatar {
-  width: 40px; height: 40px; min-width: 40px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
   border-radius: 50%;
   background: #e8f0fe;
   color: #1a56db;
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 500; font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
 }
 
-.user-name  { font-size: 14px; font-weight: 500; }
-.user-email { font-size: 12px; color: #666; margin-top: 2px; }
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+.user-email {
+  font-size: 12px;
+  color: #666;
+  margin-top: 2px;
+}
 
-h1 { font-size: 20px; font-weight: 500; margin-bottom: 1.5rem; }
-h2 { font-size: 16px; font-weight: 500; margin: 1.5rem 0 1rem; }
+h1 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 1.5rem 0 1rem;
+}
